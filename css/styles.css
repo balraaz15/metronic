@@ -1,0 +1,94 @@
+*, *:before, *:after { box-sizing: border-box; margin:0; padding:0;}
+
+body{font-family:'Poppins',sans-serif;}
+
+#content h1, #content h2, #content h3, #content h4, #content h5{opacity: 0.8;}
+#content h6{opacity:0.9;}
+
+.navbar{padding:0;background:white; color:black;height:72px;}
+.navbar li a{font-weight:300; color:black; opacity:0.8;}
+.navbar li a:hover{color:#283593;}
+.navbar-nav a span:first-child{margin-right:5px;}
+.navbar-nav a .ti-angle-down{font-size:0.8em;}
+.nav-right{padding-right:30px;}
+.nav-right li{margin-right: 15px; font-size:1.2em; font-weight:700;cursor: pointer; 
+	background: -webkit-linear-gradient(#c558dd, #210314);-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;}
+
+.logo{width:240px; background:#17131c;padding:1rem; color:snow;margin-right:20px;}
+.logo a{color:snow; letter-spacing:1px;font-weight:500;}
+.sidebar-toglr{float:right;font-size:1.2em;cursor:pointer;}
+.logo .sidebar-toglr{padding-top:10px;}
+
+.sb-active:before{position:absolute;left:19px;}
+.logo1{width:60px; height: 72px; background:#17131c;color:snow;}
+.logo1 a{display: none;}
+.logo1 .sidebar-toglr{position:absolute;left:0; top:25px;}
+
+.sidebar, .sidebar1{background:#1f2530; color:#c2c4c6;}
+.sidebar{min-width:240px; padding:10px 0;}
+.sidebar .dash-it, .sidebar1 .dash-it, .sidebar .dashboard{color:white;display:block;padding:8px 25px; font-size: 13px;}
+.sidebar [class^="ti-"] {margin-right:15px;}
+.sidebar .dash-it:after {font-family:themify; content:"\e649";font-size:9px;float:right;padding-top:8px;}
+.dash-it:hover, .dashboard:hover{background:#17131c; text-decoration:none; color:inherit;}
+.sidebar .dash-it-li, .sidebar1 .dash-it-li{display:none;}
+.sidebar .dash-it-li a, .sidebar1 .dash-it-li a{padding-left:50px; font-size:13px;color:inherit;}
+.sidebar .dash-it-li a:hover, .sidebar1 .dash-it-li a:hover{text-decoration:none; color:white;}
+.dash-titl{padding-left:25px;}
+.dl-active{background:#17131c;}
+.sidebar1 .dash-it-li{z-index:100;width:200px;position:absolute;left:70px;list-style:none;padding:15px;}
+
+.sidebar1{width:60px; padding-top:15px;}
+.sidebar1 .dash-titl{visibility:hidden;}
+.sidebar1 [class^="ti-"] { margin-right: 40px; font-size:17px;}
+.sidebar1 .dash-it{padding-left:19px;}
+.sidebar1 .dashboard{color:white;padding-left:19px; padding:7px 19px;}
+
+.dashboard{font-weight:300; font-size:16px;}
+
+.new{background:#283593;font-size:0.8em;color:white;padding:3px 7px;border-radius:10px; margin-right:0 !important;}
+
+main{padding-top:72px;display:flex;flex-direction:row; flex-wrap: nowrap;}
+#content{background:lightgrey; padding:1.5rem 1rem;}
+.row{margin:0;}
+
+.date{background:white;border-radius:20px;padding:7px 10px; font-size:0.9em;cursor:pointer;}
+.date .ti-angle-down{background:#283593; border-radius:50%;color:white;cursor:pointer;padding:3px;margin-left:5px;}
+
+
+
+#content>.row{display:flex;flex-direction:row;justify-content:space-around;}
+#content>.row>div{width:32%; background:white; box-shadow:4px 4px 4px lightgrey;position:relative;}
+.row .trends .all, .row .activity span{float:right;cursor:pointer;}
+#content .row>div h5{padding:20px 30px 10px 20px;}
+.trend-list{padding: 10px 30px 0; margin:0;}
+
+.trends .all{
+	padding:10px; border-radius:15px;border:1px solid lightgrey; 
+	color:#1a117c;cursor:pointer; font-weight:400; position:relative;top:0;
+}
+.trends .all:hover{background:lightgrey;}
+.trend-list .price{color:red;opacity:0.8; padding-top:20px;}
+
+.blog h5 a{
+	width:20%; background:#283593; padding:7px 10px; color:white; 
+	border-radius:20px;font-weight:300;font-size:.7em;text-decoration:none;
+}
+.new:hover, .blog h5 a:hover, .date .ti-angle-down:hover{background:#1a237e;}
+.blog div h4{padding:3rem 1.5rem 0 1.5rem; text-align:end; color:snow;}
+.blog .blog-info{padding: 1rem;}
+
+.searchbar{display:none; border:0; border-radius:5px; padding:10px; width:400px;z-index:1000;position:absolute;right:24px;top:15px;}
+
+.rside-nav ul li{list-style:none;background:white;min-width:30px;padding:5px;position:absolute;}
+
+.all-hover{background:white; padding:20px 10px 10px 10px;width:200px;position:absolute;right:20px; 
+	border-radius:5px;z-index:1000;display:none;}
+.all-hover ul li{list-style:none;}
+.all-hover ul li a{color: black;}
+
+@media(max-width: 991px) {
+	.navbar{
+		background:#17131c;
+	}
+}
