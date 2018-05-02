@@ -1,9 +1,6 @@
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth()+1;
-var yyyy = today.getFullYear();
 
 function main(){
+
 	//For links in sidebar
 	$(".dash-it").on('click', function(){
 		if($(this).hasClass('dl-active')){
@@ -14,23 +11,41 @@ function main(){
 		}
 		$(this).next('.dash-it-li').css("background", "#17131c");
 	});
+
 	//For links in sidebar
 
 	//For searchbar
-	$(document.body).click(function(e){
-		closeMenu();
-	});
+	// $(document).click(function(e){
+	// 	closeSearch();
+	// });
 
-	function closeMenu(){
-		$(".searchbar").fadeOut(200);
-	}
+	// function closeSearch(){
+	// 	$(".searchbar").fadeOut(200);
+	// }
 
-	$(".search").on('click', function(e){
-		e.stopPropagation();
-		$('.searchbar').fadeToggle();
-		$('.searchbar').focus().css("border", "1px solid white");
-	});
-	//For searchbar
+	// $(".search").on('click', function(e){
+	// 	e.stopPropagation();
+	// 	$('.searchbar').fadeToggle();
+	// 	$('.searchbar').focus();
+	// });
+	
+	// $('.actions').on('click', function(e){
+	// 	e.stopPropagation();
+	// 	$('.actions-li').fadeToggle();
+	// 	$(this).toggleClass('active');
+	// });
+
+	// $('.reports-li').hide();
+	// $('.reports').on('click', function(e){
+	// 	e.stopPropagation();
+	// 	$('.reports-li').fadeToggle();
+	// 	$(this).toggleClass('active');
+	// });
+
+	// $('.quick-act').on('click', function(e){
+	// 	e.stopPropagation();
+	// 	$('.quick-actions').fadeToggle();
+	// });
 
 	//For sidebar toggler
 	$('.sidebar-toglr').on('click', function(){
@@ -44,15 +59,35 @@ function main(){
 			$('.sidebar').removeClass('sidebar').addClass('sidebar1');
 		}
 	});
-	//For sidebar toggler
 
-	$('.all, .ti-control-record').hover(function(){
-		$('.all-hover').fadeToggle();
+	$('[data-toggle="tooltip"]').tooltip();
+	$(".tip-top").tooltip({placement : 'top'});
+
+
+	
+	$('.all').mouseenter(function(){
+		$('.all-hover').show(500);
+		$('.all-hover').mouseenter(function(){
+			$(this).show();
+		});
+	}).mouseleave(function(){
+		$('.all-hover').hide();
+		$('.all-hover').mouseleave(function(){
+			$(this).hide();
+		});
 	});
-
-	// $('.sidebar1').next('.dash-it').on('hover', function(){
-	// 	$('.dash-it-li').show();
-	// });
+	$('.ti-control-record').mouseenter(function(){
+		$('.actions-hover').show(500);
+		$('.actions-hover').mouseenter(function(){
+			$(this).show();
+		});
+	}).mouseleave(function(){
+		$('.actions-hover').hide();
+		$('.actions-hover').mouseleave(function(){
+			$(this).hide();
+		});
+	});
 }
 
 $(document).ready(main);
+
