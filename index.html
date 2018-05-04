@@ -19,36 +19,6 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-	<!-- <nav class="navbar navbar-expand-lg fixed-top shadow">
-		<div class="logo">
-			<a class="navbar-brand" href="index.html">METRONIC </a> <span class="sidebar-toglr ti-align-right"></span>
-		</div>			
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="background:black;">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link actions" href="#"><span class="ti-layers-alt"></span>Actions <span class="sr-only">(current)</span><span class="ti-angle-down"></span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link reports" href="#"><span class="ti-blackboard"></span>Reports<span class="ti-angle-down"></span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#"><span class="ti-mobile"></span>Apps <span class="new">new!</span><span class="ti-angle-down"></span></a>
-          </li>
-        </ul>
-        <div class="float-right">
-        	<ul class="navbar-nav mr-auto nav-right">
-        	<li class="nav-item search"><span class="ti-search"></span></li>
-        	<li class="nav-item animated infinite swing"><span class="ti-bell" style="display:block;"></span></li>
-        	<li class="nav-item quick-act"><span class="ti-target"></span></li>
-        	<li class="nav-item">IMG</li>
-        	<li class="nav-item"><span class="ti-view-grid"></span></li>
-        </ul>
-        </div>        
-      </div>
-	</nav> -->
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
 	  <div class="logo">
@@ -64,26 +34,42 @@
 	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	          Actions
 	        </a>
-	          <div class="dropdown-menu actions-li shadow" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="#">Create New Post</a>
-					<a class="dropdown-item" href="#">Generate Reports</a>
-					<a class="dropdown-item" href="#">Manage Orders</a>
-					<a class="dropdown-item" href="#">Customer Feedbacks</a>
-					<a class="dropdown-item" href="#">Register Member</a>
-	        </div>
+	          <ul class="dropdown-menu actions-li shadow animated fadeIn" aria-labelledby="navbarDropdown">
+					<li class="dropdown-item"><a href="#"><span class="ti-panel"></span>Create New Post</a></li>
+					<li class="dropdown-item"><a href="#"><span class="ti-panel"></span>Generate Reports</a></li>
+					<li class="dropdown-item"><a href="#"><span class="ti-panel"></span>Manage Orders</a>
+						<ul class="shadow animated fadeIn">
+							<li><a href="#">Actions Dropdown 1</a></li>
+							<li><a href="#">Actions Dropdown 1</a></li>
+							<li><a href="#">Actions Dropdown 1</a></li>
+							<li><a href="#">Actions Dropdown 1</a></li>
+							<li><a href="#">Actions Dropdown 1</a></li>
+						</ul>
+					</li>					
+					<li class="dropdown-item"><a href="#"><span class="ti-panel"></span>Customer Feedbacks</a>
+						<ul class="shadow animated fadeIn">
+							<li><a href="#">Feedback Dropdown 1</a></li>
+							<li><a href="#">Feedback Dropdown 1</a></li>
+							<li><a href="#">Feedback Dropdown 1</a></li>
+							<li><a href="#">Feedback Dropdown 1</a></li>
+							<li><a href="#">Feedback Dropdown 1</a></li>
+						</ul>
+					</li>
+					<li class="dropdown-item"><a href="#"><span class="ti-panel"></span>Register Member</a></li>
+	        </ul>
 	      </li>
 	      <li class="nav-item dropdown">
 	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	          Reports
 	        </a>
-	          <div class="dropdown-menu reports-li shadow" aria-labelledby="navbarDropdown">
+	          <div class="dropdown-menu reports-li shadow animated fadeIn" aria-labelledby="navbarDropdown">
 				<div class="rl-fin">
 					<h6>Finance Reports</h6>
-					<a class="dropdown-item" href="#">Annual Reports</a>
-					<a class="dropdown-item" href="#">HR Reports</a>
-					<a class="dropdown-item" href="#">IPO Reports</a>
-					<a class="dropdown-item" href="#">Finance Margins</a>
-					<a class="dropdown-item" href="#">Revenue Reports</a>
+					<a class="dropdown-item" href="#"><span class="ti-agenda"></span>Annual Reports</a>
+					<a class="dropdown-item" href="#"><span class="ti-agenda"></span>HR Reports</a>
+					<a class="dropdown-item" href="#"><span class="ti-agenda"></span>IPO Reports</a>
+					<a class="dropdown-item" href="#"><span class="ti-agenda"></span>Finance Margins</a>
+					<a class="dropdown-item" href="#"><span class="ti-agenda"></span>Revenue Reports</a>
 				</div>
 				<div class="rl-proj">
 					<h6>Project Reports</h6>
@@ -115,9 +101,9 @@
 	        </div>
 	      </li><li class="nav-item dropdown">
 	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          Apps
+	          Apps <span>new</span>
 	        </a>
-	          <div class="dropdown-menu actions-li shadow" aria-labelledby="navbarDropdown">
+	          <div class="dropdown-menu shadow animated fadeIn" aria-labelledby="navbarDropdown">
 					<a class="dropdown-item" href="#">Create New Post</a>
 					<a class="dropdown-item" href="#">Generate Reports</a>
 					<a class="dropdown-item" href="#">Manage Orders</a>
@@ -129,39 +115,142 @@
 	    
 	    
     	<ul class="nav-right">
-    		<a class="search"><span class="ti-search"></span></a>
-    		<a class="dropdown-toggle animated infinite jackInTheBox" href="#" id="notificationdrop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    			<span class="ti-bell"></span>
-    		</a>
-    		<div class="dropdown-menu qactions-li shadow" aria-labelledby="notificationdrop">
-					<a class="dropdown-item" href="#">Create New Post</a>
+    		<li><a>
+	    		<div class="dropdown">
+				  <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <span class="ti-search"></span>
+				  </a>
+				  <div class="dropdown-menu shadow animated fadeInDown" aria-labelledby="dropdownMenuButton">
+				    <input type="text" name="" placeholder="Search here" style="border:0;">
+				  </div>
+				</div>
+			</a></li>
+			<li><a>
+	    		<div class="dropdown">
+				  <a class="notification dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <span class="ti-bell"></span>
+				  </a>
+				  <div class="dropdown-menu notf-drp shadow-lg animated fadeIn" aria-labelledby="dropdownMenuButton">
+				    <div class="notf-drp-h">
+				    	<h4>9 New</h4>
+				    	<h6>Notifications</h6>
+				    </div>
+				    <div class="notf-drp-b">
+				    	<nav>
+						  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+						    <a class="nav-item nav-link active" id="nav-alerts-tab" data-toggle="tab" href="#nav-alerts" role="tab" aria-controls="nav-alerts" aria-selected="true">Alerts</a>
+						    <a class="nav-item nav-link" id="nav-events-tab" data-toggle="tab" href="#nav-events" role="tab" aria-controls="nav-events" aria-selected="false">Events</a>
+						    <a class="nav-item nav-link" id="nav-logs-tab" data-toggle="tab" href="#nav-logs" role="tab" aria-controls="nav-logs" aria-selected="false">Logs</a>
+						  </div>
+						</nav>
+						<div class="tab-content" id="nav-tabContent">
+						  <div class="tab-pane fade show active" id="nav-alerts" role="tabpanel" aria-labelledby="nav-alerts-tab">
+						  	<ul>
+						  		<li>12 new users registered <span class="float-right">Just now</span></li>
+						  		<li>12 new users registered <span class="float-right">Just now</span></li>
+						  		<li>12 new users registered <span class="float-right">Just now</span></li>
+						  		<li>12 new users registered <span class="float-right">Just now</span></li>
+						  		<li>12 new users registered <span class="float-right">Just now</span></li>
+						  		<li>12 new users registered <span class="float-right">Just now</span></li>
+						  	</ul>
+						  </div>
+						  <div class="tab-pane fade" id="nav-events" role="tabpanel" aria-labelledby="nav-events-tab">
+						  	<ul>
+						  		<li>New order recieved <span class="float-right">Just now</span></li>
+						  		<li>New order recieved <span class="float-right">Just now</span></li>
+						  		<li>New order recieved <span class="float-right">Just now</span></li>
+						  		<li>New order recieved <span class="float-right">Just now</span></li>
+						  		<li>New order recieved <span class="float-right">Just now</span></li>
+						  	</ul>
+						  </div>
+						  <div class="tab-pane fade" id="nav-logs" role="tabpanel" aria-labelledby="nav-logs-tab">
+						  	<p>All caught up! <br> No new logs.</p>
+						  </div>
+						</div>
+				    </div>
+				  </div>
+				</div>
+			</a></li>
+			<li><a>
+	    		<div class="dropdown">
+				  <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <span class="ti-target"></span>
+				  </a>
+				  <div class="dropdown-menu qact-drp shadow-lg animated fadeIn" aria-labelledby="dropdownMenuButton">
+				    <div class="qact-drp-h">
+				    	<h4>Quick Actions</h4>
+				    	<h6>Shortcuts</h6>
+				    </div>
+				    <div class="qact-drp-b row">
+				    	<a href="#" class="col-6">
+				    		<span class="ti-briefcase"></span>
+				    		<h6>Quick Actions</h6>
+				    	</a>
+				    	<a href="#" class="col-6">
+				    		<span class="ti-briefcase"></span>
+				    		<h6>Quick Actions</h6>
+				    	</a>
+				    	<div class="w-100"></div>
+				    	<a href="#" class="col-6">
+				    		<span class="ti-briefcase"></span>
+				    		<h6>Quick Actions</h6>
+				    	</a>
+				    	<a href="#" class="col-6">
+				    		<span class="ti-briefcase"></span>
+				    		<h6>Quick Actions</h6>
+				    	</a>
+				    </div>
+				  </div>
+				</div>
+			</a></li>
+			<li><a>
+	    		<div class="dropdown">
+				  <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    IMG
+				  </a>
+				  <div class="dropdown-menu profile-drp shadow animated fadeIn" aria-labelledby="dropdownMenuButton">
+				    <div class="profile-drp-h row">
+				    	<div class="col-3" style="padding-top: 20px;">
+				    		IMG
+				    	</div>
+				    	<div class="col-9">
+				    		<h6 style="text-align:left;">Mark Andre</h6>
+				    		<p style="font-size:12px">marc.andre@gmail.com</p>
+				    	</div>
+				    </div>
+				    <div class="profile-drp-b">
+				    	<ul>
+				    		<li><a href="#"><span class="ti-user"></span>My Profile</a></li>
+				    		<li><a href="#"><span class="ti-user"></span>Activity</a></li>
+				    		<li><a href="#"><span class="ti-user"></span>Messages</a></li>
+				    	</ul>
+				    	<ul>
+				    		<li><a href="#"><span class="ti-user"></span>FAQ</a></li>
+				    		<li><a href="#"><span class="ti-user"></span>Support</a></li>
+				    	</ul>
+				    	<button class="btn">Logout</button>
+				    </div>
+				  </div>
+				</div>
+			</a></li>
+			<li><a>
+				<div class="dropdown">
+				  <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <span class="ti-view-grid"></span>
+				  </a>
+				  <div class="dropdown-menu shadow animated fadeIn" aria-labelledby="dropdownMenuButton">
+				  	<a class="dropdown-item" href="#">Create New Post</a>
 					<a class="dropdown-item" href="#">Generate Reports</a>
 					<a class="dropdown-item" href="#">Manage Orders</a>
 					<a class="dropdown-item" href="#">Customer Feedbacks</a>
 					<a class="dropdown-item" href="#">Register Member</a>
-	        </div>
-
-    		<a class="dropdown-toggle" href="#" id="quickactionsdrop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          <span class="ti-target"></span>
-	        </a>
-	          <div class="dropdown-menu qactions-li shadow" aria-labelledby="quickactionsdrop">
-					<a class="dropdown-item" href="#">Create New Post</a>
-					<a class="dropdown-item" href="#">Generate Reports</a>
-					<a class="dropdown-item" href="#">Manage Orders</a>
-					<a class="dropdown-item" href="#">Customer Feedbacks</a>
-					<a class="dropdown-item" href="#">Register Member</a>
-	        </div>
-    		<a>IMG</a>
-    		<a><span class="ti-view-grid"></span></a>
+				  </div>
+				</div>
+			</a></li>
     	</ul>
         
 	  </div>
 	</nav>
-
-	<!-- For searchbar -->
-	<div class="clearfix" style="width:400px;">
-		<input class="searchbar shadow" type="text" name="" placeholder="Search here">
-	</div>
 
 	<main class="row">
 		<section class="sidebar" class="col">
@@ -259,10 +348,10 @@
 			
 			<div class="rside-nav shadow">
 				<ul>
-					<li data-toggle="tooltip" data-placement="right" title="Settings"><a href="#"><span class="ti-settings"></span></a></li>
-					<li data-toggle="tooltip" data-placement="right" title="Settings"><a href="#"><span class="ti-settings"></span></a></li>
-					<li data-toggle="tooltip" data-placement="right" title="Settings"><a href="#"><span class="ti-settings"></span></a></li>
-					<li data-toggle="tooltip" data-placement="right" title="Settings"><a href="#"><span class="ti-settings"></span></a></li>
+					<li data-toggle="tooltip" data-placement="right" title="Layout Builder"><a href="#"><span class="ti-settings"></span></a></li>
+					<li data-toggle="tooltip" data-placement="right" title="Purchase"><a href="#"><span class="ti-shopping-cart"></span></a></li>
+					<li data-toggle="tooltip" data-placement="right" title="Documentation"><a href="#"><span class="ti-comment-alt"></span></a></li>
+					<li data-toggle="tooltip" data-placement="right" title="Support"><a href="#"><span class="ti-comments-smiley"></span></a></li>
 				</ul>
 			</div>
 
@@ -292,7 +381,8 @@
 
 			<!-- First row in content section -->
 			<div class="row frow">
-			<div class="trends">				
+			<div class="trends col-lg-4 col-sm-12">
+			<div>				
 				<div style="background:linear-gradient(to bottom, white, lightblue);height:225px;">
 					<h5>Trends <sub class="all">All <span class="ti-angle-down"></span></sub></h5>
 					<div id="chartContainer">
@@ -323,7 +413,10 @@
 					<h6 class="col-3 price">+$6700</h6>
 				</div>
 			</div>
-			<div class="activity">				
+		</div>
+		
+			<div class="activity col-lg-4 col-sm-12">
+			<div>				
 				<div class="activity-head">
 					<h5>Activity <span class="ti-control-record"></span></h5>
 					<div class="actions-hover shadow-lg" style="display:none;">
@@ -361,8 +454,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="blog">	
-				<div style="background:#bdbdbd;height:200px;position:relative;">
+		</div>
+		
+			<div class="blog col-lg-4 col-sm-12">
+			<div>	
+				<div style="background:#7b7878;height:200px;position:relative;">
 					<h5><a href="blog">Blog</a></h5>
 					<h4>Introducing New Feature</h4>
 				</div>
@@ -371,7 +467,7 @@
 						<div>IMG</div>
 						<div>
 							<h6>Anna Krox</h6>
-							<p style="font-size:0.7em;">UX/UI Designer, Google</p>
+							<p style="font-size:0.8em;">UX/UI Designer, Google</p>
 						</div>
 						<div>
 							<h3 style="padding-left:20px;margin-bottom:0;">18</h3><p style="font-size:0.8em;">Comments</p>
@@ -396,11 +492,12 @@
 				</div>				
 			</div>
 		</div>
+		</div>
 		<!-- First row in content section -->
 
 		<!-- Second row in content section -->
 		<div class="row srow shadow">
-			<div class="col-4">
+			<div class="col-lg-4 col-md-12">
 				<div class="row">
 					<div class="col-8">
 						<h6>Member Profit</h6>
@@ -429,14 +526,67 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-4">
-				
+			<div class="col-lg-4 col-md-12">
+				<div class="row">
+					<div class="col-8">
+						<h6>Member Profit</h6>
+						<p>Average Weekly Profit</p>
+					</div>
+					<div class="col-4">
+						<h4>+$17,800</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-8">
+						<h6>Member Profit</h6>
+						<p>Average Weekly Profit</p>
+					</div>
+					<div class="col-4">
+						<h4>+$17,800</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-8">
+						<h6>Member Profit</h6>
+						<p>Average Weekly Profit</p>
+					</div>
+					<div class="col-4">
+						<h4>+$17,800</h4>
+					</div>
+				</div>
 			</div>
-			<div class="col-4">
-				
+			<div class="col-lg-4 col-md-12">
+				<div class="row">
+					<div class="col-8">
+						<h6>Member Profit</h6>
+						<p>Average Weekly Profit</p>
+					</div>
+					<div class="col-4">
+						<h4>+$17,800</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-8">
+						<h6>Member Profit</h6>
+						<p>Average Weekly Profit</p>
+					</div>
+					<div class="col-4">
+						<h4>+$17,800</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-8">
+						<h6>Member Profit</h6>
+						<p>Average Weekly Profit</p>
+					</div>
+					<div class="col-4">
+						<h4>+$17,800</h4>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- Second row in content section -->
+
 
 		</section>
 	</main>
