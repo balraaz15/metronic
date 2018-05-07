@@ -24,9 +24,17 @@
 	  <div class="logo">
 			<a class="navbar-brand" href="index.html">METRONIC </a> <span class="sidebar-toglr ti-align-right"></span>
 		</div>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
+	  <div>
+	  	<button class="navbar-toggler sm-sidebar-togler" type="button" data-toggle="collapse" aria-expanded="false">
+	    <span class="nti ti-align-right"></span>
 	  </button>
+	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="nti ti-align-justify"></span>
+	  </button>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navRightContent" aria-controls="navRightContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="nti ti-more"></span>
+	  </button>
+	  </div>
 
 	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	    <ul class="navbar-nav mr-auto">
@@ -113,15 +121,17 @@
 	      </li>
 	    </ul>
 	    
-	    
+	    </div>
+		<div class="collapse navbar-collapse" id="navRightContent"> 
+
     	<ul class="nav-right">
     		<li><a>
-	    		<div class="dropdown">
+	    		<div class="dropdown search">
 				  <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    <span class="ti-search"></span>
 				  </a>
-				  <div class="dropdown-menu shadow animated fadeInDown" aria-labelledby="dropdownMenuButton">
-				    <input type="text" name="" placeholder="Search here" style="border:0;">
+				  <div class="dropdown-menu shadow animated fadeInDown searchbar" aria-labelledby="dropdownMenuButton">
+				    <input type="text" name="" placeholder="Search here" style="border:0;"><span class="ti-close"></span>
 				  </div>
 				</div>
 			</a></li>
@@ -182,16 +192,16 @@
 				    	<h6>Shortcuts</h6>
 				    </div>
 				    <div class="qact-drp-b row">
-				    	<a href="#" class="col-6">
+				    	<a href="#" class="col-6" style="border: 1px solid #f1f1f1;">
 				    		<span class="ti-briefcase"></span>
 				    		<h6>Quick Actions</h6>
 				    	</a>
-				    	<a href="#" class="col-6">
+				    	<a href="#" class="col-6" style="border-bottom: 1px solid #f1f1f1;">
 				    		<span class="ti-briefcase"></span>
 				    		<h6>Quick Actions</h6>
 				    	</a>
 				    	<div class="w-100"></div>
-				    	<a href="#" class="col-6">
+				    	<a href="#" class="col-6" style="border-right: 1px solid #f1f1f1;">
 				    		<span class="ti-briefcase"></span>
 				    		<h6>Quick Actions</h6>
 				    	</a>
@@ -206,15 +216,15 @@
 			<li><a>
 	    		<div class="dropdown">
 				  <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				    IMG
+				    <img src="img/user.jpg" alt="User" height="30" width="30" style="border-radius:50%">
 				  </a>
 				  <div class="dropdown-menu profile-drp shadow animated fadeIn" aria-labelledby="dropdownMenuButton">
 				    <div class="profile-drp-h row">
-				    	<div class="col-3" style="padding-top: 20px;">
-				    		IMG
+				    	<div class="col-3">
+				    		<img src="img/user.jpg" alt="User" height="60" width="60" style="border-radius:50%;">
 				    	</div>
 				    	<div class="col-9">
-				    		<h6 style="text-align:left;">Mark Andre</h6>
+				    		<h6 style="text-align:left; padding:7px 0 0 10px;">Mark Andre</h6>
 				    		<p style="font-size:12px">marc.andre@gmail.com</p>
 				    	</div>
 				    </div>
@@ -238,12 +248,33 @@
 				  <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    <span class="ti-view-grid"></span>
 				  </a>
-				  <div class="dropdown-menu shadow animated fadeIn" aria-labelledby="dropdownMenuButton">
-				  	<a class="dropdown-item" href="#">Create New Post</a>
-					<a class="dropdown-item" href="#">Generate Reports</a>
-					<a class="dropdown-item" href="#">Manage Orders</a>
-					<a class="dropdown-item" href="#">Customer Feedbacks</a>
-					<a class="dropdown-item" href="#">Register Member</a>
+				  <div class="dropdown-menu modal animated fadeInRight" aria-labelledby="dropdownMenuButton">
+				  	<div class="modal-body">
+				  		<nav>
+						  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+						    <a class="nav-item nav-link active" id="nav-messages-tab" data-toggle="tab" href="#nav-messages" role="tab" aria-controls="nav-messages" aria-selected="true">Messages</a>
+						    <a class="nav-item nav-link" id="nav-settings-tab" data-toggle="tab" href="#nav-settings" role="tab" aria-controls="nav-settings" aria-selected="false">Settings</a>
+						    <a class="nav-item nav-link" id="nav-logs1-tab" data-toggle="tab" href="#nav-logs1" role="tab" aria-controls="nav-logs1" aria-selected="false">Logs</a>
+						  </div>
+						</nav>
+						<div class="tab-content" id="nav-tabContent">
+						  <div class="tab-pane fade show active" id="nav-messages" role="tabpanel" aria-labelledby="nav-messages-tab">
+						  	<div>
+						  		<div>IMG</div>
+						  		<div>What time will be the meeting?</div>
+						  	</div>
+						  	<div>
+						  		It's at 2.30pm
+						  	</div>
+						  </div>
+						  <div class="tab-pane fade" id="nav-settings" role="tabpanel" aria-labelledby="nav-settings-tab">
+						  	<p>This section is for settings</p>
+						  </div>
+						  <div class="tab-pane fade" id="nav-logs1" role="tabpanel" aria-labelledby="nav-logs1-tab">
+						  	<p>This section is for logs section.</p>
+						  </div>
+						</div>	
+				  	</div>
 				  </div>
 				</div>
 			</a></li>
@@ -370,18 +401,22 @@
 					</span><span class="ti-angle-down"></span>
 				</p>
 		          <div class="dropdown-menu date-down shadow" aria-labelledby="dateDropdown">
-						<a class="dropdown-item" href="#">Create New Post</a>
-						<a class="dropdown-item" href="#">Generate Reports</a>
-						<a class="dropdown-item" href="#">Manage Orders</a>
-						<a class="dropdown-item" href="#">Customer Feedbacks</a>
-						<a class="dropdown-item" href="#">Register Member</a>
+						<a class="dropdown-item" href="#">Today</a>
+						<a class="dropdown-item" href="#">Yesterday</a>
+						<a class="dropdown-item" href="#">Last 7 days</a>
+						<a class="dropdown-item" href="#">Last 30 days</a>
+						<a class="dropdown-item" href="#">This Month</a>
+						<a class="dropdown-item" href="#">Last Month</a>
+						<a class="dropdown-item" href="#">Custom Range</a>
+						<button class="btn btn-success">Apply</button>
+						<button class="btn">Cancel</button>
 		        </div>
 			</div>
 
 
 			<!-- First row in content section -->
 			<div class="row frow">
-			<div class="trends col-lg-4 col-sm-12">
+			<div class="trends col-xl-4 col-sm-12">
 			<div>				
 				<div style="background:linear-gradient(to bottom, white, lightblue);height:225px;">
 					<h5>Trends <sub class="all">All <span class="ti-angle-down"></span></sub></h5>
@@ -415,7 +450,7 @@
 			</div>
 		</div>
 		
-			<div class="activity col-lg-4 col-sm-12">
+			<div class="activity col-xl-4 col-sm-12">
 			<div>				
 				<div class="activity-head">
 					<h5>Activity <span class="ti-control-record"></span></h5>
@@ -456,15 +491,17 @@
 			</div>
 		</div>
 		
-			<div class="blog col-lg-4 col-sm-12">
+			<div class="blog col-xl-4 col-sm-12">
 			<div>	
-				<div style="background:#7b7878;height:200px;position:relative;">
+				<div style="background:url(img/img1.jpeg);    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;height:200px;position:relative;">
 					<h5><a href="blog">Blog</a></h5>
 					<h4>Introducing New Feature</h4>
 				</div>
 				<div class="blog-info">
 					<div class="auth-info" style="display:flex; flex-direction: row; justify-content: space-around;">
-						<div>IMG</div>
+						<div><img src="img/user1.jpg" alt="User1" width="50" height="50" style="border-radius:50%;"></div>
 						<div>
 							<h6>Anna Krox</h6>
 							<p style="font-size:0.8em;">UX/UI Designer, Google</p>
@@ -504,7 +541,7 @@
 						<p>Average Weekly Profit</p>
 					</div>
 					<div class="col-4">
-						<h4>+$17,800</h4>
+						<h5 style="color:purple">+$17,800</h5>						
 					</div>
 				</div>
 				<div class="row">
@@ -513,7 +550,7 @@
 						<p>Average Weekly Profit</p>
 					</div>
 					<div class="col-4">
-						<h4>+$17,800</h4>
+						<h5 style="color:red">+$17,800</h5>
 					</div>
 				</div>
 				<div class="row">
@@ -522,67 +559,17 @@
 						<p>Average Weekly Profit</p>
 					</div>
 					<div class="col-4">
-						<h4>+$17,800</h4>
+						<h5 style="color:darkcyan">+$17,800</h5>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-12">
-				<div class="row">
-					<div class="col-8">
-						<h6>Member Profit</h6>
-						<p>Average Weekly Profit</p>
-					</div>
-					<div class="col-4">
-						<h4>+$17,800</h4>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-8">
-						<h6>Member Profit</h6>
-						<p>Average Weekly Profit</p>
-					</div>
-					<div class="col-4">
-						<h4>+$17,800</h4>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-8">
-						<h6>Member Profit</h6>
-						<p>Average Weekly Profit</p>
-					</div>
-					<div class="col-4">
-						<h4>+$17,800</h4>
-					</div>
-				</div>
+				<h5>Daily Sales</h5>
+				<p>Check out each column for more details</p>
 			</div>
 			<div class="col-lg-4 col-md-12">
-				<div class="row">
-					<div class="col-8">
-						<h6>Member Profit</h6>
-						<p>Average Weekly Profit</p>
-					</div>
-					<div class="col-4">
-						<h4>+$17,800</h4>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-8">
-						<h6>Member Profit</h6>
-						<p>Average Weekly Profit</p>
-					</div>
-					<div class="col-4">
-						<h4>+$17,800</h4>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-8">
-						<h6>Member Profit</h6>
-						<p>Average Weekly Profit</p>
-					</div>
-					<div class="col-4">
-						<h4>+$17,800</h4>
-					</div>
-				</div>
+				<h5>Profit Share</h5>
+				<p>Profit Share between customers.</p>
 			</div>
 		</div>
 		<!-- Second row in content section -->
