@@ -17,6 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="js/Chart.js"></script>
 </head>
 <body>
 
@@ -291,8 +292,7 @@
 			  
 			<ul>
 				<li><a href="#" class="dash-it"><span class="ti-layers-alt"></span> <span class="text">Base</span></a>
-					<ul class="dash-it-li">
-						<p class="dash-it-li-title" style="display:none;">Base</p>
+					<ul class="dash-it-li">						
 						<li><a href="#">Base List 1</a></li>
 						<li><a href="#">Base List 2</a></li>
 						<li><a href="#">Base List 3</a></li>
@@ -334,18 +334,18 @@
 			</ul>
 				<h6 class="text-muted dash-titl"><sub>TOOLS</sub></h6>
 			<ul>
-				<li><a href="#" class="dash-it"><span class="ti-settings"></span>Layout Builder</a></li><hr>
+				<li><a href="#" class="dash-it"><span class="ti-settings"></span><span class="text">Layout Builder</span></a></li><hr>
 			</ul>
 				<h6 class="text-muted dash-titl"><sub>APPS</sub></h6>
 			<ul>
-				<li><a href="#" class="dash-it"><span class="ti-email"></span>Mail</a></li><hr>
+				<li><a href="#" class="dash-it"><span class="ti-email"></span><span class="text">Mail</span></a></li><hr>
 			</ul>
 				<h6 class="text-muted dash-titl"><sub>SNIPPETS</sub></h6>
 			<ul>
-				<li><a href="#" class="dash-it"><span class="ti-receipt"></span>Pricing Tables</a></li>
-				<li><a href="#" class="dash-it"><span class="ti-money"></span>Invoices</a></li>
-				<li><a href="#" class="dash-it"><span class="ti-info-alt"></span>FAQ's</a></li>
-				<li><a href="#" class="dash-it"><span class="ti-briefcase"></span>Custom Pages</a></li>
+				<li><a href="#" class="dash-it"><span class="ti-receipt"></span><span class="text">Pricing Tables</span></a></li>
+				<li><a href="#" class="dash-it"><span class="ti-money"></span><span class="text">Invoices</span></a></li>
+				<li><a href="#" class="dash-it"><span class="ti-info-alt"></span><span class="text">FAQ's</span></a></li>
+				<li><a href="#" class="dash-it"><span class="ti-briefcase"></span><span class="text">Custom Pages</span></a></li>
 			</ul>
 		</section>
 
@@ -418,11 +418,65 @@
 			<div class="row frow">
 			<div class="trends col-xl-4 col-sm-12">
 			<div>				
-				<div style="background:linear-gradient(to bottom, white, lightblue);height:225px;">
+				<div style="position:relative;background:linear-gradient(to bottom, white, lightblue);height:225px;">
 					<h5>Trends <sub class="all">All <span class="ti-angle-down"></span></sub></h5>
-					<div id="chartContainer">
-						
-					</div>
+					<canvas id="myChart" height="50%" width="100%"></canvas>
+					<script>
+					var ctx = document.getElementById("myChart").getContext('2d');
+
+					var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+					gradientStroke.addColorStop(0, '#80b6f4');
+					gradientStroke.addColorStop(1, '#f49080');
+
+					var gradientFill = ctx.createLinearGradient(400, 0, 50, 0);
+					gradientFill.addColorStop(0, "rgba(128, 182, 244, 0.6)");
+					gradientFill.addColorStop(1, "rgba(244, 144, 128, 0.6)");
+
+					var myChart = new Chart(ctx, {
+					    type: 'line',			
+					    data: {
+					        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+					        datasets: [{
+					            label: 'Sales stats',
+					            data: [12, 19, 3, 5, 22, 3, 24,13,36,37,15],
+					            backgroundColor: gradientFill,					          
+					            borderColor: gradientStroke,
+					            borderWidth: 1,
+					            // pointBackgroundColor: 'gradientStroke', 
+					            // pointBorderColor: 'gradientStroke',
+					            pointHoverBackgroundColor: 'gradientStroke', 
+					            pointHoverBorderColor: 'gradientStroke'						            
+					        }]
+					    },
+					    options: {					    	
+					        scales: {
+					            yAxes: [{
+					            	display: false,				            						           
+					            	gridLines: {
+					            		display: false
+					            	},
+					            	ticks: {
+					            		display: false,
+					            		beginAtZero: true,
+					            		maxTicksLimit: 5,
+					            	}
+					            }],
+					            xAxes: [{
+					            	display: false,
+					            	gridLines: {
+					            		display: false
+					            	},
+					            	ticks: {
+					            		display: false
+					            	}
+					            }]
+					        },
+					        legend: {
+					        	display: false
+					        }
+					    }
+					});
+					</script>
 					<div class="all-hover shadow-lg" style="display:none;">
 						<ul>
 							<li><a href="#">Activity</a></li>
@@ -454,6 +508,62 @@
 			<div>				
 				<div class="activity-head">
 					<h5>Activity <span class="ti-control-record"></span></h5>
+					<canvas id="activityChart"></canvas>
+					<script>
+					var ctx = document.getElementById("activityChart");
+
+					var myChart = new Chart(ctx, {
+					    type: 'line',			
+					    data: {
+					        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+					        datasets: [{
+					            label: 'Sales stats',
+					            data: [12, 19, 3, 5, 22, 3, 24,13,36,37,15],
+					            					          
+					            borderColor: 'orange',
+					            borderWidth: 4,					    
+					            // pointBackgroundColor: 'gradientStroke', 
+					            // pointBorderColor: 'gradientStroke',
+					            pointHoverBackgroundColor: 'gradientStroke', 
+					            pointHoverBorderColor: 'gradientStroke',
+					            fill: true,
+					            lineTension: 0.01,
+					            borderCapStyle: 'butt'				            
+					        }],
+					    },
+					    options: {
+					    	canvas: {
+					    		width: 300,
+					    		height: 200,
+					    	},
+					    	scales: {
+					            yAxes: [{
+					            	display: false,				            						           
+					            	gridLines: {
+					            		display: false
+					            	},
+					            	ticks: {
+					            		display: false,
+					            		beginAtZero: true,
+					            		maxTicksLimit: 5,
+					            	}
+					            }],
+					            xAxes: [{
+					            	display: false,
+					            	gridLines: {
+					            		display: false
+					            	},
+					            	ticks: {
+					            		display: false
+					            	}
+					            }]
+					        },
+					        legend: {
+					        	display: false
+					        }					    
+					    }
+					});
+					</script>
 					<div class="actions-hover shadow-lg" style="display:none;">
 						<ul>
 							<li><a href="#">Activity</a></li>
@@ -566,13 +676,82 @@
 			<div class="col-lg-4 col-md-12">
 				<h5>Daily Sales</h5>
 				<p>Check out each column for more details</p>
+				<canvas id="dailySalesChart" width="300" height="150"></canvas>
+				<script>
+					var ctx = document.getElementById('dailySalesChart');
+
+					var myChart = new Chart(ctx, {
+					  type: 'bar',
+					  data: {
+					    labels: ['Risk Level', 'Label1', 'Label2', 'Label3'],
+					    datasets: [
+					      {
+					        label: 'Low',
+					        data: [67.8, 34,73, 21],
+					        backgroundColor: 'orange',
+					      },
+					      {
+					        label: 'Moderate',
+					        data: [20.7, 22,73,43],
+					        backgroundColor: 'purple',
+					      },
+					      {
+					        label: 'High',
+					        data: [11.4, 25,15,74],
+					        backgroundColor: 'grey',
+					      }
+					    ]
+					  },
+					  options: {
+					    scales: {
+					      xAxes: [{ stacked: true }],
+					      yAxes: [{ stacked: true }]
+					    }
+					  }
+					});
+				</script>
 			</div>
 			<div class="col-lg-4 col-md-12">
 				<h5>Profit Share</h5>
 				<p>Profit Share between customers.</p>
+				<canvas id="profitChart"></canvas>
+				<script>
+					var ctx = document.getElementById('profitChart');
+
+					var myChart = new Chart(ctx, {
+					  type: 'pie',
+					  data: {
+					    labels: ['Red', 'Blue', 'Yellow','Green'],
+					    datasets: [{
+					    	fill: true,
+					    	data: [200,35,347, 147],
+					    	backgroundColor: ['red', 'blue', 'yellow', 'green']
+					    }]
+					  },
+					  options: {
+					  		legend: {
+					  			boxWidth: 50
+					  		}
+					  }
+					});
+				</script>
 			</div>
 		</div>
 		<!-- Second row in content section -->
+
+		<!-- Third row in content section -->
+		<div class="row trow">
+			<div class="col-xl-4 col-sm-12">
+				<h5>Personal Income <p class="year">2018 <span class="ti-angle-down"></span></p></h5>
+			</div>
+			<div class="col-xl-4 col-sm-12">
+				<h5>Finance Stats <p class="year">2018 <span class="ti-angle-down"></span></p></h5>
+			</div>
+			<div class="col-xl-4 col-sm-12">
+				<h5>Packages <p class="year">2018 <span class="ti-angle-down"></span></p></h5>
+			</div>
+		</div>
+		<!-- Third row in content section -->
 
 
 		</section>

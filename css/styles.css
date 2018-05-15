@@ -172,12 +172,12 @@ main{display:flex;flex-direction:row;padding-top:50px;position:relative;}
 
 #content>.frow{display:flex;flex-direction:row;justify-content:space-around;}
 /*#content>.frow>div{box-shadow:4px 4px 4px lightgrey;position:relative;}*/
-.frow .trends .all, .frow .activity .activity-head span{float:right;cursor:pointer;}
+.frow .trends .all, .frow .activity .activity-head span, .year{float:right;cursor:pointer;}
 #content .frow>div h5{padding:12px 30px 10px 20px;}
 .trend-list{padding: 10px 30px 0; margin:0;}
 /*.trends>div {background:linear-gradient(to bottom, white, lightblue);height:300px;}*/
-.trends .all{padding:7px 10px; position:relative;top:0;}
-.all, .profile-drp-b button{background:white; border-radius:15px;border:1px solid lightgrey; color:#1a117c; font-weight:400; font-size:13px}
+.trends .all,.year{padding:7px 10px; position:relative;top:0;}
+.all, .profile-drp-b button, .year{background:white; border-radius:15px;border:1px solid lightgrey; color:#1a117c; font-weight:400; font-size:13px}
 .trends .all:hover, .profile-drp-b button:hover{background:lightgrey;}
 .trend-list .price{color:red;opacity:0.8; padding-top:20px;text-align:right;}
 
@@ -298,6 +298,9 @@ main{display:flex;flex-direction:row;padding-top:50px;position:relative;}
 }
 .modal .tab-content{padding:10px 10px 0;}
 
+#myChart{position: absolute; max-height:75%;}
+#activityChart{position:absolute;padding-bottom: 40px; max-height:35%; margin-top:-10px;}
+
 
 @keyframes ring{
 	5%, 15%, 25%, 35%, 45% {transform: translate(-1px, 0);}
@@ -310,11 +313,13 @@ main{display:flex;flex-direction:row;padding-top:50px;position:relative;}
     body{overflow:auto;}
 	.sidebar-toglr, .sidebar, .logo1, .sidebar1{display:none;}
 	.trends, .activity, .blog{margin: 10px 0;}
-    .navbar{background:#17131c !important;}
+    .navbar{background:#17131c !important; padding-right:10px;}
     .nti{color:white; padding:5px 10px; border-radius:10px;}
     .navbar-toggler{padding:0;margin:-5px;}
     .navbar-toggler:focus{outline:0;}
     .sidebar-show{display:block; z-index:100;position:absolute;min-width:215px;}
+    /*.navbar-collapse.show .navbar-nav{background:white; width:200px;position:absolute;top:50px;padding-left:25px;}*/
+    /*#myChart{max-height:50%; width:100%; padding:0;}*/
 }
 
 @media(max-width:400px){

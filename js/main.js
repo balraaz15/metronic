@@ -1,6 +1,7 @@
 
 function main(){
 
+
 	$('.search .ti-close').on('click', function(){
 		$('.searchbar.show').removeClass('show');
 	});
